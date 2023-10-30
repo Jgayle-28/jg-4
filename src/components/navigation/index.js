@@ -5,7 +5,7 @@ import NavButton from './NavButton'
 import SideNav from './SideNav'
 import SideNavMenu from './SideNavMenu'
 import { useGlobalContext } from '../../context/store'
-import logo from '../../assets/logo/logo-white.svg'
+import logo from '../..'
 import { Link } from 'react-router-dom'
 
 export default function Navigation() {
@@ -21,9 +21,13 @@ export default function Navigation() {
   return (
     <>
       <nav className='w-full flex md:flex-row justify-between items-center py-4 px-8'>
-        <div>
+        <div className='nav-logo'>
           <Link to='/'>
-            <img className='h-8 w-8' src={logo} alt='logo' />
+            <img
+              className='h-8 w-8'
+              src={`/assets/images/logo/logo-white.svg`}
+              alt='logo'
+            />
           </Link>
         </div>
 

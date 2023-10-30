@@ -10,12 +10,12 @@ import Work from './pages/Work'
 
 function App() {
   return (
-    <div className='App'>
+    <div className='selection:bg-brandPrimary '>
       <Router>
         <header>
           <Navigation />
         </header>
-        <main className='min-h-full'>
+        <main className='min-h-full flex flex-col justify-center items-center px-8 overflow-y-auto'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/work' element={<Work />} />

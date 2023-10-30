@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,6 +28,16 @@ body {
   width: 100vw;
 }
 
-font-dosis {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+}
+
+font-dosis {
+  font-family: 'Dosis', sans-serif !important;
 }
