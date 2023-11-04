@@ -20,7 +20,10 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className='w-full flex md:flex-row justify-between items-center py-4 px-8'>
+      <nav
+        className='w-full flex md:flex-row justify-between items-center py-4 px-8 !backdrop-blur-sm bg-white/30'
+        style={{ backdropFilter: 'blur(10px' }}
+      >
         <div className='nav-logo'>
           <Link to='/'>
             <img

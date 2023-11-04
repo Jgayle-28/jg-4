@@ -89,7 +89,7 @@ export default function About() {
           />
         </motion.svg>
       </div>
-      <div className='w-full py-12 about-main '>
+      <div className='w-full py-12 about-main'>
         <div className='w-[80%] mx-auto'>
           {/* <TextReveal> */}
           <motion.p
