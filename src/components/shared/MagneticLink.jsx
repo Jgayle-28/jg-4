@@ -20,7 +20,7 @@ export default function MagneticLink({ children }) {
   const { x, y } = position
   return (
     <motion.div
-      className='cursor-pointer p-1 border border-transparent transition-border duration-500 ease hover:border-brandPrimary/50 rounded-full'
+      className='cursor-pointer p-1 border border-transparent transition-border duration-500 ease hover:border-brandSecondary rounded-full'
       style={{ position: 'relative' }}
       ref={ref}
       onMouseMove={handleMouse}

@@ -18,6 +18,7 @@ export default function HoverSection() {
         transition={{ type: 'tween', ease: 'backOut', duration: 0.5 }}
       >
         <p
+          className='font-dosis'
           onMouseEnter={() => {
             setIsHovered(true)
           }}

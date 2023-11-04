@@ -10,7 +10,7 @@ import Work from './pages/Work'
 
 function App() {
   return (
-    <div className='selection:bg-brandPrimary relative flex min-h-screen flex-col justify-center overflow-hidden'>
+    <div className='selection:bg-brandSecondary relative flex min-h-screen flex-col justify-center overflow-hidden'>
       <Router>
         <header>
           <Navigation />

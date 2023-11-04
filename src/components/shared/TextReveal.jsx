@@ -40,6 +40,45 @@ export default function TextReveal({
       {/* Color Slide */}
       <motion.div
         variants={{
+          hidden: { opacity: 0, bottom: 0 },
+          visible: { opacity: 1, top: '100%' },
+        }}
+        initial='hidden'
+        animate={colorSLiceControls}
+        transition={{
+          duration: 0.3,
+          ease: 'easeIn',
+          delay: slideDelay ? slideDelay : 0,
+        }}
+        style={{
+          position: 'absolute',
+          top: 4,
+          bottom: 4,
+          left: 0,
+          right: 0,
+          zIndex: 20,
+        }}
+        className='bg-brandSecondary'
+      />
+      {/*       
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial='hidden'
+        animate={mainControls}
+        transition={{
+          duration: 0.5,
+          delay: animationDelay ? animationDelay : 0.4,
+        }}
+        style={{ width }}
+      >
+        {children}
+      </motion.div>
+      
+      <motion.div
+        variants={{
           hidden: { opacity: 0, left: 0 },
           visible: { opacity: 1, left: '100%' },
         }}
@@ -58,8 +97,8 @@ export default function TextReveal({
           right: 0,
           zIndex: 20,
         }}
-        className='bg-brandPrimary'
-      />
+        className='bg-brandSecondary'
+      /> */}
     </div>
   )
 }

@@ -25,7 +25,7 @@ export default function Navigation() {
           <Link to='/'>
             <img
               className='h-8 w-8'
-              src={`/assets/images/logo/logo-white.svg`}
+              src={`/assets/images/logo/logo-black.svg`}
               alt='logo'
             />
           </Link>
