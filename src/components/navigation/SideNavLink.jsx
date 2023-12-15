@@ -30,11 +30,6 @@ export default function SideNavLink({ data, index }) {
   return (
     <>
       <motion.div variants={menuEntrance} {...mountAnim} custom={index}>
-        {/* <Link
-          href={href}
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-        > */}
         <a
           onClick={() => handleLinkClick(href)}
           onMouseOver={handleMouseOver}
@@ -49,7 +44,6 @@ export default function SideNavLink({ data, index }) {
             {isHovered ? <GlitchText text={title} /> : title}
           </motion.p>
         </a>
-        {/* </Link> */}
       </motion.div>
     </>
   )

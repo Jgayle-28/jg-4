@@ -1,18 +1,13 @@
-import { useCallback, useState } from 'react'
-
+import { useCallback } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import NavButton from './NavButton'
 import SideNav from './SideNav'
 import SideNavMenu from './SideNavMenu'
 import { useGlobalContext } from '../../context/store'
-import logo from '../..'
 import { Link } from 'react-router-dom'
 
 export default function Navigation() {
-  // const [showMenu, setShowMenu] = useState(false)
-  // console.log('showMenu :>> ', showMenu)
   const { showMenu, setShowMenu } = useGlobalContext()
-  console.log('showMenu :>> ', showMenu)
 
   const toggleMenu = useCallback(() => {
     setShowMenu((prevState) => !prevState)
@@ -20,10 +15,7 @@ export default function Navigation() {
 
   return (
     <>
-      <nav
-        className='w-full flex md:flex-row justify-between items-center py-4 px-8 !backdrop-blur-sm bg-white/30'
-        style={{ backdropFilter: 'blur(10px' }}
-      >
+      <nav className='top-0 w-full flex md:flex-row justify-between items-center py-4 px-8 main-navigation'>
         <div className='nav-logo'>
           <Link to='/'>
             <img

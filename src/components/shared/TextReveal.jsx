@@ -58,7 +58,7 @@ export default function TextReveal({
           right: 0,
           zIndex: 20,
         }}
-        className='bg-brandSecondary'
+        className='bg-brandPrimary'
       />
       {/*       
       <motion.div

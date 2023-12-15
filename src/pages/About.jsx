@@ -22,7 +22,7 @@ const letter = {
 
 export default function About() {
   return (
-    <section className='w-full max-w-6xl relative'>
+    <section className='w-full h-screen max-w-6xl relative mx-auto px-5 md:px-10'>
       <motion.div
         variants={{
           hidden: {
@@ -89,7 +89,7 @@ export default function About() {
           />
         </motion.svg>
       </div>
-      <div className='w-full py-12 about-main'>
+      <div className='w-full pt-12 about-main'>
         <div className='w-[80%] mx-auto'>
           {/* <TextReveal> */}
           <motion.p

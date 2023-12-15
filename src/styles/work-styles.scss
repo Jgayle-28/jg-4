@@ -1,3 +1,4 @@
+// work page
 .double {
   display: flex;
   margin-top: 5vh;
@@ -38,7 +39,7 @@
     // font-size: 16px;
     padding: 10px;
     h3 {
-      font-size: 1.2em !important;
+      font-size: 1.5em !important;
       margin-bottom: 5px !important;
       margin-top: 0px;
       font-weight: 400;
@@ -48,9 +49,22 @@
       font-size: 1em !important;
       margin: 0px;
       color: rgb(187, 187, 187);
+      font-weight: 400;
       &:nth-of-type(2) {
         color: rgb(101, 101, 101);
       }
     }
+  }
+}
+
+// Single project styles
+.project {
+  &-title {
+    font-weight: 500;
+    // font-size: 5vw;
+    font-family: 'Poppins', sans-serif !important;
+  }
+  &-section-title {
+    // font-size: 1vw;
   }
 }

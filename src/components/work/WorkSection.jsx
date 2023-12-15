@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { useRouter } from '../../hooks/use-router'
 
 export default function WorkSection({ reversed, projects }) {
   const firstImage = useRef(null)
@@ -7,6 +8,8 @@ export default function WorkSection({ reversed, projects }) {
   let xPercent = reversed ? 100 : 0
   let currentXPercent = reversed ? 100 : 0
   const speed = 0.15
+
+  const router = useRouter()
 
   const manageMouseMove = (e) => {
     const { clientX } = e
@@ -25,7 +28,7 @@ export default function WorkSection({ reversed, projects }) {
     //Change width of images between 33.33% and 66.66% based on cursor
     const firstImagePercent = 66.66 - currentXPercent * 0.33
     const secondImagePercent = 33.33 + currentXPercent * 0.33
-    console.log(secondImagePercent)
+
     firstImage.current.style.width = `${firstImagePercent}%`
     secondImage.current.style.width = `${secondImagePercent}%`
 
@@ -37,6 +40,10 @@ export default function WorkSection({ reversed, projects }) {
     }
   }
 
+  const handleProjectClick = (id) => {
+    router.push(`/project/${id}`)
+  }
+
   return (
     <div
       onMouseMove={(e) => {
@@ -44,7 +51,11 @@ export default function WorkSection({ reversed, projects }) {
       }}
       className='double'
     >
-      <div ref={firstImage} className='imageContainer'>
+      <div
+        ref={firstImage}
+        className='imageContainer cursor-pointer'
+        onClick={() => handleProjectClick(projects[0].id)}
+      >
         <div className='stretchyWrapper'>
           <img
             src={`/assets/images/projects/${projects[0].src}`}
@@ -59,7 +70,11 @@ export default function WorkSection({ reversed, projects }) {
         </div>
       </div>
 
-      <div ref={secondImage} className='imageContainer'>
+      <div
+        ref={secondImage}
+        className='imageContainer cursor-pointer'
+        onClick={() => handleProjectClick(projects[1].id)}
+      >
         <div className='stretchyWrapper'>
           <img
             src={`/assets/images/projects/${projects[1].src}`}
